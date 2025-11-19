@@ -14,7 +14,9 @@ const twilioRoutes = require("./routes/twilio.routes");
 
 const corsOptions = {
     origin: ["http://localhost:3000","https://campus-cab-client.vercel.app/"], 
-    credentials: true
+    credentials: true,
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 };
 
 app.use(cors(corsOptions));
